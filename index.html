@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="pucp-landing-wrappeR">
+        <div class="top-visitas">
+            <div class="header">
+                <div class="headerCt">
+                    <img src="logo_pro.svg" alt="">
+                </div>
+            </div>
+            <div class="topVisitasCt">
+                <div class="banner">
+                    <div class="bannerCt">
+                        <div class="bannerCtInfo">
+                            <h2>Ingresa a la <b>PUCP</b> por:</h2>
+                            <div class="bannerCtInfoArs">
+                                <h1 class="bannerCtInfoArsFirst">Admisión por</h1>
+                                <h1 class="bannerCtInfoArsSecond">Rendimiento Superior<img src="virrete.png"></h1>
+                            </div>
+                            <div class="bannerCtInfoPo">
+                                <h1><img src="emoji.png">La Primera Opción®</h1>
+                            </div>
+                            <h3>!Inscríbete a nuestra <span>charla virtual</span> y descubre el paso a paso para postular con total seguridad!</h3>
+                            <div class="bannerCtInfoCt">
+                                <p>13 de octubre</p>
+                                <div><span></span></div>
+                                <p>6 p. m.</p>
+                                <div><span></span></div>
+                                <img src="zoom.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <img src="banner-mobile.png" class="bannerMobile" alt="">
+                </div>
+                <div class="separator">
+                    <div class="separatorCt">
+                        <p>Bachillerato Internacional - Padres - Escolares de 5°</p>
+                        <p>Bachillerato Internacional - Padres - Escolares de 5°</p>
+                        <p>Bachillerato Internacional - Padres - Escolares de 5°</p>
+                        <p>Bachillerato Internacional - Padres - Escolares de 5°</p>
+                        <p>Bachillerato Internacional - Padres - Escolares de 5°</p>
+                        <p>Bachillerato Internacional - Padres - Escolares de 5°</p>
+                        <p>Bachillerato Internacional - Padres - Escolares de 5°</p>
+                        <p>Bachillerato Internacional - Padres - Escolares de 5°</p>
+                        <p>Bachillerato Internacional - Padres - Escolares de 5°</p>
+                    </div>
+                </div>
+                <div class="form">
+                    <div id="topForm" class="formCt">
+                        <div class="formCtInner" id="registro">
+                            <p>¡Regístrate a nuestra charla virtual de <b>modalidades de admisión</b></p>
+                            <form id="my-form-pregrado" method="POST">
+                                <div class="double__form">
+                                    <div class="input-field">
+                                        <input class="input-dinamico-estudiante" id="names" type="text" name="names" maxlength="40" autocomplete="off" placeholder=" " required />
+                                        <label>Nombres*</label>
+                                    </div>
+                                    <div class="input-field">
+                                        <input class="input-dinamico-estudiante" id="paternal_surname" type="text" name="paternal_surname" maxlength="40" autocomplete="off" placeholder=" " required />
+                                        <label>Apellido Paterno*</label>
+                                    </div>
+                                </div>
+                                <div class="double__form">
+                                    <div class="input-field">
+                                        <input class="input-dinamico-estudiante" id="maternal_surname" type="text" name="maternal_surname" maxlength="40" autocomplete="off" placeholder=" " required />
+                                        <label>Apellido Materno*</label>
+                                    </div>
+                                    <div class="input-field">
+                                        <select class="input-dinamico-estudiante" id="type-document" required name="type-document">
+                                            <option value="" disabled selected></option>
+                                            <option value="DNI">DNI</option>
+                                            <option value="Carné de Extranjería">Carnet de Extranjería</option>
+                                            <option value="Pasaporte">Pasaporte</option>
+                                        </select>
+                                        <label>Tipo de Documento*</label>
+                                    </div>
+                                </div>
+                                <div class="double__form">
+                                    <div class="input-field">
+                                        <input class="input-dinamico-estudiante" id="number-document" type="text" name="number-document" maxlength="40" autocomplete="off" required placeholder=" " />
+                                        <label>Nro de Documento*</label>
+                                    </div>
+                                    <div class="input-field">
+                                        <input class="input-dinamico-estudiante" id="email" type="email" name="email" maxlength="40" autocomplete="off" placeholder=" " required />
+                                        <label>Correo*</label>
+                                    </div>
+                                </div>
+                                <div class="double__form">
+                                    <div class="input-field">
+                                        <input class="input-dinamico-estudiante" id="phone" type="tel" name="phone" maxlength="9" pattern="^[0-9]{9}$" title="El celular debe contener exactamente 9 números." autocomplete="off" placeholder=" " required />
+                                        <label>Celular*</label>
+                                    </div>
+                                    <div class="input-field">
+                                        <input class="input-dinamico-estudiante" list="lista-colegios" id="search-colegio" type="text" placeholder=" " required autocomplete="off">
+                                        <datalist id="lista-colegios" placeholder=" "></datalist>
+                                        <input type="hidden" id="school-code" required name="school" placeholder=" ">
+                                        <label>Busca tu colegio...</label>
+                                    </div>
+                                </div>
+                                <div class="double__form">
+                                    <div class="input-field">
+                                        <select class="input-dinamico-estudiante" required id="degree-study" name="degree-study">
+                                            <option value="" disabled selected></option>
+                                            <option value="2028">3ro. de secundaria</option>
+                                            <option value="2027">4to. de secundaria</option>
+                                            <option value="2026">5to. de secundaria</option>
+                                            <option value="2025">Terminé en 2025</option>
+                                            <option value="2024">Terminé en 2024</option>
+                                            <option value="2023">Terminé en 2023</option>
+                                            <option value="Egresado">Terminé en otro año</option>
+                                        </select>
+                                        <label>Año de Egreso*</label>
+                                    </div>
+                                    <div class="input-field">
+                                        <select class="input-dinamico-estudiante" required id="career-1" name="career-1">
+                                            <option value="" disabled selected></option>
+                                            <option value="ARQUITECTURA">Arquitectura</option>
+                                            <option value="ARTE, MODA Y DISEÑO TEXTIL">Arte, Moda y Diseño Textil</option>
+                                            <option value="DISEÑO GRÁFICO">Diseño Gráfico</option>
+                                            <option value="DISEÑO INDUSTRIAL">Diseño Industrial</option>
+                                            <option value="EDUCACIÓN ARTÍSTICA">Educación Artística</option>
+                                            <option value="ESCULTURA">Escultura</option>
+                                            <option value="GRABADO">Grabado</option>
+                                            <option value="PINTURA">Pintura</option>
+                                            <option value="CREACIÓN Y PRODUCCIÓN ESCÉNICA">Creación y Producción Escénica</option>
+                                            <option value="DANZA">Danza</option>
+                                            <option value="MÚSICA">Música</option>
+                                            <option value="TEATRO">Teatro</option>
+                                            <option value="CONTABILIDAD">Contabilidad</option>
+                                            <option value="FÍSICA">Física</option>
+                                            <option value="INGENIERÍA AMBIENTAL Y SOSTENIBLE">Ingeniería Ambiental y Sostenible</option>
+                                            <option value="INGENIERÍA BIOMÉDICA">Ingeniería Biomédica</option>
+                                            <option value="INGENIERÍA CIVIL">Ingeniería Civil</option>
+                                            <option value="INGENIERÍA DE LAS TELECOMUNICACIONES">Ingeniería de las Telecomunicaciones</option>
+                                            <option value="INGENIERÍA DE MINAS">Ingeniería de Minas</option>
+                                            <option value="INGENIERÍA ELECTRÓNICA">Ingeniería Electrónica</option>
+                                            <option value="INGENIERÍA GEOLÓGICA">Ingeniería Geológica</option>
+                                            <option value="INGENIERÍA INDUSTRIAL">Ingeniería Industrial</option>
+                                            <option value="INGENIERÍA INFORMÁTICA">Ingeniería Informática</option>
+                                            <option value="INGENIERÍA MECÁNICA">Ingeniería Mecánica</option>
+                                            <option value="INGENIERÍA MECATRÓNICA">Ingeniería Mecatrónica</option>
+                                            <option value="INGENIERÍA QUÍMICA">Ingeniería Química</option>
+                                            <option value="MATEMÁTICAS">Matemáticas</option>
+                                            <option value="QUÍMICA">Química</option>
+                                            <option value="ANTROPOLOGÍA">Antropología</option>
+                                            <option value="CIENCIA POLÍTICA Y GOBIERNO">Ciencia Política y Gobierno</option>
+                                            <option value="ECONOMÍA">Economía</option>
+                                            <option value="FINANZAS">Finanzas</option>
+                                            <option value="RELACIONES INTERNACIONALES">Relaciones Internacionales</option>
+                                            <option value="SOCIOLOGÍA">Sociología</option>
+                                            <option value="COMUNICACIÓN AUDIOVISUAL">Comunicación Audiovisual</option>
+                                            <option value="COMUNICACIÓN PARA EL DESARROLLO">Comunicación para el Desarrollo</option>
+                                            <option value="PERIODISMO">Periodismo</option>
+                                            <option value="PUBLICIDAD">Publicidad</option>
+                                            <option value="DERECHO">Derecho</option>
+                                            <option value="EDUCACIÓN INICIAL">Educación Inicial</option>
+                                            <option value="EDUCACIÓN PRIMARIA">Educación Primaria</option>
+                                            <option value="EDUCACIÓN SECUNDARIA">Educación Secundaria</option>
+                                            <option value="GESTIÓN">Gestión</option>
+                                            <option value="ARQUEOLOGÍA">Arqueología</option>
+                                            <option value="FILOSOFÍA">Filosofía</option>
+                                            <option value="GEOGRAFÍA Y MEDIO AMBIENTE">Geografía y Medio Ambiente</option>
+                                            <option value="HISTORIA">Historia</option>
+                                            <option value="HUMANIDADES">Humanidades</option>
+                                            <option value="LINGÜÍSTICA Y LITERATURA">Lingüística y Literatura</option>
+                                            <option value="GASTRONOMÍA">Gastronomía</option>
+                                            <option value="HOTELERÍA">Hotelería</option>
+                                            <option value="TURISMO">Turismo</option>
+                                            <option value="PSICOLOGÍA">Psicología</option> 
+                                        </select>
+                                        <label>Carrera de interés*</label>
+                                    </div>
+                                </div>
+                                <div class="charla">
+                                    <h3></h3>
+                                    <input type="hidden" id="charla-hidden" name="charla_seleccionada" value="">
+                                    <input type="hidden" id="charla-fecha" name="charla_fecha" value="">
+                                    <input type="hidden" id="charla-hora" name="charla_hora" value="">
+                                    <input type="hidden" id="charla-zoom" name="charla_zoom" value="">
+                                </div>
+                                <div class="authorization">
+                                    <input type="checkbox" required name="" id="">
+                                    <p>Autorizo a la Pontificia Universidad Católica del Perú a utilizar mis datos personales para los fines mencionados. <span class="disclam" style="cursor:pointer;text-decoration: underline;">Ver autorización.*</span></p>
+                                </div>
+                                <div class="authorization">
+                                    <input type="checkbox" required name="" id="">
+                                    <p>Autorizo a la Pontificia Universidad Católica del Perú a enviarme información sobre sus programas académicos.</p>
+                                </div>
+                                <button type="submit">¡INSCRIBIRME!<span><img src="arrow-right.png" alt=""></span></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img src="/modules/custom/pucp_salesforce_adm/images/visitas-guiadas/banner-desktop.png" class="bannerDesktop" alt="">
+        </div>
+        <!-- <div class="container">
+            <h2 class="main-title">Elige <em>tu camino</em><br>a la <strong>PUCP</strong></h2>
+
+            <div class="desktop-tabs">
+                <button class="tab-btn active" data-target="opt-rendimiento">Admisión por Rendimiento Superior</button>
+                <button class="tab-btn" data-target="opt-primera">La Primera Opción®</button>
+            </div>
+
+            <div class="card-section active-tab" id="opt-rendimiento">
+                <div class="slider-viewport">
+                    <div class="slider-track" id="track-rendimiento">
+                        <div class="slide front">
+                            <h3 class="mobile-card-title">Admisión por Rendimiento Superior</h3>
+                            <div class="avatar-container">
+                                <div class="circle-bg">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png" alt="Estudiante 1" style="mix-blend-mode: multiply; opacity: 0.5;">
+                                </div>
+                            </div>
+                            <div class="paper-note">
+                                Reconocemos tu esfuerzo escolar para ofrecerte un proceso de postulación ágil y acorde a tu <em>desempeño académico</em>.
+                            </div>
+                        </div>
+                        <div class="slide back details-block">
+                            <h4>¿A quién está dirigida?</h4>
+                            <p>Estudiantes de 5.° de secundaria o egresados que se encuentren en el tercio, quinto o medio superior y que pertenezcan a un colegio seleccionado PUCP.</p>
+                            
+                            <h4>¿Por qué elegirla?</h4>
+                            <ul class="details-list">
+                                <li>Evaluación orientada al perfil y logros de la etapa escolar.</li>
+                                <li>Proceso diseñado para revalidar tu constancia durante la secundaria.</li>
+                                <li>Evaluamos tu desempeño previo para darte una vía acorde a tu nivel de preparación.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="mobile-dots" data-target-track="track-rendimiento">
+                    <button class="dot active" data-index="0"></button>
+                    <button class="dot" data-index="1"></button>
+                </div>
+            </div>
+
+            <div class="card-section" id="opt-primera">
+                <div class="slider-viewport">
+                    <div class="slider-track" id="track-primera">
+                        <div class="slide front">
+                            <h3 class="mobile-card-title">La Primera Opción®</h3>
+                            <div class="avatar-container">
+                                <div class="circle-bg">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png" alt="Estudiante 2" style="mix-blend-mode: multiply; opacity: 0.5;">
+                                </div>
+                            </div>
+                            <div class="paper-note">
+                                Dirigida a quienes cursan el último año de colegio y buscan <em>definir su futuro universitario</em> antes de graduarse.
+                            </div>
+                        </div>
+                        <div class="slide back details-block">
+                            <h4>¿A quién está dirigida?</h4>
+                            <p>Exclusivamente para alumnos de 5.° de secundaria.</p>
+                            
+                            <h4>¿Por qué elegirla?</h4>
+                            <ul class="details-list">
+                                <li>Rinde tu evaluación de admisión antes de culminar el año escolar.</li>
+                                <li>Planifica tu ingreso a la universidad con anticipación y reduce el estrés de fin de año.</li>
+                                <li>Una oportunidad para rendir la prueba con el conocimiento fresco de tu etapa escolar.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="mobile-dots" data-target-track="track-primera">
+                    <button class="dot active" data-index="0"></button>
+                    <button class="dot" data-index="1"></button>
+                </div>
+            </div>
+
+        </div> -->
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

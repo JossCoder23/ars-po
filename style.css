@@ -1,0 +1,980 @@
+*{
+    padding: 0;
+    font-family: "TTNorms2", sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --azul: #042354;
+    --azul-claro: #2841dd;
+    --naranja: #fe8512;
+
+    --amarillo: #f0ae19;
+    --naranja-dos: #ff6e26;
+    --celeste: #41b9e4;
+    --verde-claro: #add754;
+    --verde-agua: #00bf82;
+    --violeta: #a54afa;
+    --fucsia: #c822bc;
+    --gray: #eeeeee;
+
+    --texto-96: clamp(2rem, 1.5rem + 2.5vw, 4.1rem);
+    --texto-72: clamp(1.75rem, 1.425rem + 1.625vw, 2.9rem);
+    --texto-69: clamp(1.625rem, 1.3rem + 1.61vw, 2.8rem);
+    --texto-40: clamp(1.125rem, 0.975rem + 0.75vw, 1.4rem);
+    --texto-37: clamp(1.06rem, 0.93rem + 0.67vw, 1.33rem);
+    --texto-35: clamp(1rem, 0.87rem + 0.64vw, 1.24rem);
+    --texto-32: clamp(.8rem, 0.67rem + 0.44vw, 1.04rem);
+    --texto-30: clamp(.7rem, 0.57rem + 0.34vw, .94rem);
+}
+
+p, h1, h2, h3, h4, h5 {
+    margin: 0;
+    padding: 0;
+    font-variant-ligatures: none;
+    -webkit-font-variant-ligatures: none; 
+    font-feature-settings: "liga" 0, "dlig" 0;
+    -webkit-font-feature-settings: "liga" 0, "dlig" 0;
+}
+
+.pucp-landing-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.banner {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    min-height: auto;
+}
+
+.header {
+    display: flex;
+    justify-content: flex-start;
+    background-color: var(--azul);
+    width: 100%;
+    padding: 1rem 3rem;
+    z-index: 3;
+    position: relative;
+}
+
+.header img {
+    width: auto;
+    height: 3rem;
+}
+
+.banner {
+    padding: 5rem 3rem;
+}
+
+.bannerMobile {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+.bannerDesktop {
+    display: none;
+}
+
+.bannerCt {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    min-height: auto;
+}
+
+.bannerCtInfo {
+    position: relative;
+    z-index: 4;
+    /* height: 21rem; */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    row-gap: .5rem;
+}
+
+.bannerCtInfo h2 {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: white;
+    
+}
+
+.bannerCtInfoArs {
+    margin-top: .5rem;
+}
+
+.bannerCtInfoArs h1 {
+    font-family: "Source Serif 4", serif;
+    font-style: italic;
+    background-color: var(--fucsia);
+    font-size: 1.5rem;
+    padding: .2rem .4rem;
+}
+
+.bannerCtInfoArsFirst {
+    width: 9.5rem;
+    transform: rotate(-3deg);
+}
+
+.bannerCtInfoArsSecond {
+    width: 15rem;
+    transform: rotate(1deg);
+    margin-left: 1rem;
+    position: relative;
+}
+
+.bannerCtInfoArsSecond img {
+    position: absolute;
+    right: 0;
+    width: 2.3rem;
+    top: -1.5rem;
+    height: auto;
+}
+
+.bannerCtInfoPo {
+    margin-top: 1rem;
+}
+
+.bannerCtInfoPo h1 {
+    background-color: #41b9e4;
+    font-size: 1.5rem;
+    padding: .2rem .4rem;
+    width: 14rem;
+    font-family: "Source Serif 4", serif;
+    font-style: italic;
+    color: var(--azul);
+    transform: rotate(-2deg);
+    position: relative;
+}
+
+.bannerCtInfoPo h1 img {
+    position: absolute;
+    width: 2rem;
+    height: auto;
+    bottom: -.7rem;
+    left: -1.7rem;
+}
+
+.bannerCtInfoCt {
+    display: flex;
+    margin-top: 1rem;
+    align-items: center;
+}
+
+.bannerCtInfoCt div {
+    display: block;
+    width: 1rem;
+    height: 2rem;
+}
+
+.bannerCtInfoCt div span {
+    display: block;
+    width: .5rem;
+    height: 2rem;
+    border-right: 1.5px solid white;
+}
+
+.bannerCtInfoCt img {
+    width: auto;
+    height: 1.5rem;
+}
+
+.separator {
+    background-color: white;
+    max-height: 5rem;
+    overflow: hidden;
+    width: 100vw; /* Asegura que tome todo el ancho de la ventana */
+    padding: 1rem 0;
+    position: relative;
+}
+
+.separator2 {
+    display: none;
+    max-height: 5rem;
+    overflow: hidden;
+    width: 100vw; /* Asegura que tome todo el ancho de la ventana */
+    padding: 1rem 0 1.5rem 0;
+    position: relative;
+}
+
+.separatorCt {
+    display: flex;
+    width: max-content; /* Permite que el contenedor se expanda según su contenido */
+    animation: scrollEffect 20s linear infinite;
+}
+
+.separatorCt p {
+    min-width: 30rem;
+    font-weight: 700;
+    color: var(--azul);
+    padding-right: 2rem; /* Añade un pequeño respiro entre cada frase */
+}
+
+.separatorCtImages {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    /* Eliminamos display: flex para que las imágenes se superpongan en lugar de colocarse lado a lado */
+}
+
+.separatorCtImages img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1rem; /* Ajusta este valor según la altura real de tus ondas */
+    width: 400vw; /* Hacemos la imagen el doble de ancha para que tenga margen de desplazamiento */
+    object-fit: cover; /* o object-fit: fill si necesitas que se estire */
+}
+
+.second-image {
+    z-index: 10;
+    /* Aplicamos la animación únicamente a la segunda imagen */
+    animation: moveWave 5s linear infinite; 
+}
+
+@keyframes scrollEffect {
+    0% { 
+        transform: translateX(0); 
+    }
+    100% { 
+        /* Desplaza el contenedor a la mitad de su ancho total antes de reiniciar sin saltos */
+        transform: translateX(-50%); 
+    }
+}
+
+@keyframes moveWave {
+    0% { 
+        transform: translateX(0); 
+    }
+    100% { 
+        /* Al tener un width de 200vw, desplazarla un -50% la mueve exactamente una pantalla entera (100vw) antes de reiniciar el bucle */
+        transform: translateX(-50%); 
+    }
+}
+
+.form {
+    padding: 3rem;
+}
+
+.formCt {
+    background-color: white;
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: var(--azul);
+    border-radius: 1.5rem;
+    position: relative;
+    padding-bottom: 3rem;
+}
+
+.formCt form {
+    /* min-height: 25rem; */
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    align-items: center;
+}
+
+form .double__form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+row-gap: 1rem;
+}
+
+form .charla {
+    background-color: var(--azul);
+    padding: .5rem;
+    border-radius: 1rem;
+    width: 100%;
+}
+
+form h3 {
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+form .input-field {
+  position: relative;
+  width: 100%;
+}
+
+form .input-field input,
+form .input-field select {
+  width: 100%;
+  border-radius: 1rem;
+  padding: 0.5rem 0.8rem;
+  font-size: 0.8rem;
+  box-sizing: border-box;
+  background-color: #EAEAEA;
+  height: 2.4rem; 
+}
+
+form .input-field-checkbox {
+    display: flex;
+    flex-direction: row;
+    column-gap: 1rem;
+    align-items: center;
+    height: auto;
+}
+
+form .input-field-checkbox h5,
+form .input-field-checkbox input {
+    width: auto;
+}
+
+form .input-field-checkbox input {
+    width: 1.1rem;
+}
+
+form .input-field select:invalid {
+    color: var(--naranja);
+}
+
+form .input-field input:invalid:not(:focus):not(:placeholder-shown) {
+  border-color: var(--azul);
+}
+
+form .input-field input:invalid:not(:focus):not(:placeholder-shown) ~ label {
+  top: 0;
+  left: 0.5rem;
+  font-size: 0.7rem;
+  color: var(--azul);
+  font-weight: 600;
+  background-color: #fff;
+  padding: 1px 5px;
+  white-space: nowrap;
+  border-radius: 0.5rem;
+}
+
+form .input-field input.invalid,
+form .input-field select.invalid {
+  border: 1px solid var(--azul) !important;
+}
+
+form .input-field input.invalid ~ label,
+form .input-field select.invalid ~ label {
+  top: 0;
+  left: 0.5rem;
+  font-size: 0.7rem;
+  color: var(--azul);
+  font-weight: 600;
+  background-color: #fff;
+  padding: 1px 5px;
+  white-space: nowrap;
+  border-radius: 0.5rem;
+}
+
+form .input-field label {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    color: var(--azul);
+    font-size: 0.9rem;
+    transform: translate(0, -50%);
+    pointer-events: none;
+    background-color: transparent;
+    transition: all 0.3s ease;
+}
+form .input-field select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg fill="%23000000" height="16" viewBox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 0.3rem center;
+  background-size: 1rem;
+  padding-right: 2.2rem;
+  color: black;
+}
+
+form .input-field input:focus,
+form .input-field input:valid,
+form .input-field select:focus,
+form .input-field select:valid {
+  outline: none;
+  border: 1px solid var(--formulario-borde);
+}
+
+form .input-field input:focus ~ label,
+form .input-field input:valid ~ label,
+form .input-field select:focus ~ label,
+form .input-field select:valid ~ label {
+    white-space: nowrap;
+    border-radius: 0.5rem;
+    background-color: #fff;
+    padding: 1px 5px;
+    top: 0;
+    left: 0.5rem;
+    font-size: 0.7rem;
+    color: var(--azul);
+    font-weight: 600;
+}
+
+.authorization {
+    display: flex;
+    column-gap: .5rem;
+}
+
+.authorization p {
+    font-size: .8rem;
+    text-align: left;
+}
+ 
+.formCt form button {
+    border: none;
+    background-color: var(--fucsia);
+    color: white;
+    position: relative;
+    font-size: var(--texto-37);
+    padding: .5rem 2.5rem .5rem 1rem;
+    font-weight: 600;
+    border-radius: 2rem;
+    cursor: pointer;
+    width: 12rem;
+}
+
+.formCt form button span {
+    position: absolute;
+    right: -.2rem;
+    top: -.1rem;
+    background-color: var(--azul);
+    padding: .7rem .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2rem;
+}
+
+.formCt form button span img {
+    width: 1.5rem;
+    height: auto;
+}
+
+.bannerCtInfo h3 {
+    margin-top: 1.5rem;
+    color: white;
+    font-weight: 400;
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+}
+
+.bannerCtInfo h3 span {
+    background-color: var(--azul-claro);
+    padding: .3rem;
+}
+
+.formulario h4 {
+    font-size: var(--texto-35);
+    line-height: 1.3rem;
+    text-align: center;
+    color: white;
+    font-weight: 500;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    row-gap: .8rem;
+    height: auto;
+}
+
+form .eleccion {
+    display: flex;
+    flex-direction: row;
+    height: 1.8rem;
+}
+
+form .eleccion h3 {
+    width: 5rem;
+    display: flex;
+    align-items: center;
+}
+
+form .eleccion select {
+    width: 100%;
+    height: 1.8rem;
+    background-color: transparent;
+    outline: none;
+    border: 1px solid white;
+    height: 1.8rem;
+    padding-left: .5rem;
+    border-radius: .5rem;
+    color: rgba(255, 255, 255, 0.455);
+}
+
+form .eleccion select option {
+    background-color: var(--azul);
+    color: white;
+    font-family: "TTNorms", sans-serif;
+}
+
+form .eleccion h3 {
+    font-size: 1rem;
+    font-weight: 500;
+    color: white;
+    margin-right: .5rem;
+}
+
+form .eleccion .form__election {
+    display: flex;
+    column-gap: 1rem;
+}
+
+.form__election div {
+    display: flex;
+    column-gap: .3rem;
+}
+
+.form__election div h4 {
+    font-size: .8rem;
+}
+
+.double__form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+#contenedor-dinamico {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+#seccion-tutor,
+#seccion-estudiante,
+#campos-tutor,
+#campos-estudiante {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+#seccion-tutor h3,
+#seccion-estudiante h3 {
+    color: #ebebeb;
+    font-size: 1rem;
+    font-weight: 400;
+    
+}
+
+#seccion-estudiante h3 {
+    background-color: var(--azul);
+    padding: .5rem 1rem;
+    border-radius: 1rem;
+}
+
+#header-tutor {
+    background-color: var(--azul);
+    padding: .3rem 1rem;
+    border-radius: 1rem;
+}
+
+#toggle-tutor {
+    color: #ebebeb;
+}
+
+.double__form input,
+.double__form select {
+    width: 100%;
+    background-color: transparent;
+    outline: none;
+    border: 1px solid white;
+    height: 1.8rem;
+    padding-left: .5rem;
+    border-radius: .5rem;
+}
+
+.double__form input[type="text"] {
+    color: var(--azul);
+}
+
+.double__form input {
+    color: var(--azul);
+}
+
+.double__form select {
+    color: rgba(255, 255, 255, 0.455);
+}
+
+.double__form select option {
+    background-color: var(--azul);
+    color: white;
+    font-family: "TTNorms", sans-serif;
+}
+
+.form__container--school {
+    width: 100%;
+}
+
+.double__form input::placeholder,
+.double__form select::placeholder {
+    color: rgba(255, 255, 255, 0.455);
+}
+
+.authorization {
+    display: flex;
+    column-gap: .5rem;
+}
+
+.authorization p {
+    font-size: .8rem;
+    font-weight: 500;
+    color: var(--azul);
+}
+
+.content__button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content__button button {
+    background-color: var(--naranja);
+    color: var(--azul);
+    border: none;
+    height: 2.3rem;
+    font-weight: 700;
+    font-size: 1.1rem;
+    width: 10rem;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+footer {
+    background-color: var(--azul);
+    padding: 3rem;
+    font-size: var(--texto-32);
+    color: white;
+}
+
+.footerTopCt {
+    max-width: 68.5rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2.5rem;
+}
+
+.footerLeft {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    align-items: flex-start;
+}
+
+.footerLeftLogo {
+    width: auto;
+    height: 3rem;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.footerLeftParagraph {
+    display: flex;
+    flex-direction: column;
+    row-gap: .5rem;
+}
+
+.footerLeftIcons {
+    display: flex;
+    column-gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.footerLeftIcons img {
+    height: 2rem;
+    width: auto;
+}
+
+.footerMedium {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+.footerMedium a {
+    color: white;
+}
+
+.footerMedium img {
+    width: 15rem;
+    height: auto;
+}
+
+.footerBottomCt {
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+}
+
+.footerBottomCt img {
+    height: 3rem;
+    width: auto;
+}
+
+.footerRightImage {
+    display: none;
+}
+
+:root {
+    --bg-main: #304ffe;
+    --card-bg: #07194f;
+    --tab-inactive: #6fc5e8;
+    --text-light: #ffffff;
+    --text-dark: #07194f;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-light);
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+    padding: 2rem 1.5rem;
+    box-sizing: border-box;
+}
+
+/* --- Header Titulo --- */
+.main-title {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-bottom: 2.5rem;
+}
+.main-title em { font-style: italic; }
+.main-title strong { font-weight: 700; font-size: 2rem; }
+
+/* --- Tabs Escritorio (Ocultos en Móvil) --- */
+.desktop-tabs {
+    display: none;
+    justify-content: center;
+    gap: 0;
+}
+.tab-btn {
+    flex: 1;
+    padding: 1rem;
+    border: none;
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    border-radius: 12px 12px 0 0;
+    transition: all 0.3s ease;
+}
+.tab-btn.active {
+    background-color: var(--card-bg);
+    color: var(--text-light);
+}
+.tab-btn:not(.active) {
+    background-color: var(--tab-inactive);
+    color: var(--text-dark);
+}
+
+/* --- Tarjetas / Contenido --- */
+.card-section {
+    background-color: var(--card-bg);
+    border-radius: 20px;
+    margin-bottom: 2.5rem;
+    padding-bottom: 1rem;
+    overflow: hidden;
+}
+
+/* Variables específicas por tarjeta */
+#opt-rendimiento { --accent-color: #d81b60; }
+#opt-primera { --accent-color: #00acc1; }
+
+.slider-viewport {
+    overflow: hidden;
+    width: 100%;
+}
+
+.slider-track {
+    display: flex;
+    transition: transform 0.4s ease-in-out;
+    width: 200%; /* Dos slides del 100% cada uno */
+}
+
+.slide {
+    width: 50%; /* 50% del track (que es 200%) = 100% del viewport */
+    flex-shrink: 0;
+    padding: 2rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* --- Estilos Frontales (Izquierda) --- */
+.mobile-card-title {
+    text-align: center;
+    font-size: 1.3rem;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.avatar-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+.circle-bg {
+    width: 180px;
+    height: 180px;
+    background-color: var(--accent-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+    background-image: radial-gradient(circle, rgba(255,255,255,0.1) 20%, transparent 20%);
+    background-size: 20px 20px;
+}
+.circle-bg img {
+    width: 90%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Nota de papel */
+.paper-note {
+    background-color: white;
+    color: var(--text-dark);
+    padding: 1.2rem 1.5rem 1.2rem 2.5rem;
+    border-radius: 4px;
+    transform: rotate(-3deg);
+    position: relative;
+    font-family: 'Caveat', cursive, sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.3;
+    text-align: center;
+    box-shadow: 2px 4px 10px rgba(0,0,0,0.3);
+}
+.paper-note em { font-weight: 700; }
+
+/* Efecto de agujeros de cuaderno en CSS puro */
+.paper-note::before {
+    content: '';
+    position: absolute;
+    left: 8px;
+    top: 10px;
+    bottom: 10px;
+    width: 12px;
+    background-image: radial-gradient(circle, var(--card-bg) 45%, transparent 50%);
+    background-size: 100% 25px;
+    background-repeat: repeat-y;
+}
+
+/* --- Estilos Traseros (Derecha / Detalles) --- */
+.details-block h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+    padding-bottom: 0.5rem;
+}
+.details-block p, .details-block li {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+}
+.details-list {
+    list-style: none;
+    padding: 0;
+}
+.details-list li {
+    position: relative;
+    padding-left: 1.5rem;
+}
+.details-list li::before {
+    content: '›';
+    position: absolute;
+    left: 0;
+    top: -2px;
+    color: var(--accent-color);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* --- Controles Móviles (Puntos) --- */
+.mobile-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    padding: 0.5rem 0 1rem 0;
+}
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.4);
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+.dot.active { background-color: var(--text-light); }
+
+
+/* ====================================================
+    MEDIA QUERIES (DESKTOP - SEGUNDA IMAGEN)
+    ==================================================== */
+@media (min-width: 768px) {
+    .desktop-tabs { display: flex; }
+    
+    /* En escritorio, ocultamos las tarjetas por defecto */
+    .card-section {
+        display: none;
+        border-radius: 0 0 20px 20px; /* Borde superior plano por los tabs */
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+    /* Solo mostramos la tarjeta activa del tab */
+    .card-section.active-tab { display: block; }
+    
+    .mobile-card-title { display: none; }
+    .mobile-dots { display: none; }
+
+    .slider-viewport { overflow: visible; }
+    
+    /* Forzamos el slider a mostrar ambas columnas (front y back) juntas */
+    .slider-track {
+        width: 100%;
+        transform: translateX(0) !important; /* Anula el JS móvil */
+    }
+
+    .slide {
+        width: 50%; /* 50% de la tarjeta */
+        padding: 3rem;
+    }
+
+    .slide.front { border-right: 1px solid rgba(255,255,255,0.1); }
+}
